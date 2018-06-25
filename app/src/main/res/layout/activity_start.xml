@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+
+    <TextView
+        android:id="@+id/logo"
+        style="@style/Base.TextAppearance.AppCompat.Display4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="TRIVIA"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/high_score"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:gravity="center"
+        android:text="HIGH SCORE"
+        android:textColor="#00AF7F"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/high_score"
+        android:layout_marginBottom="10dp"
+        android:indeterminate="true"
+        android:indeterminateTint="#00AF7F"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/loader"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/loader"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/b_general_knowledge"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="General Knowledge"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_films"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Films"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_celebrities"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Celebrities"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/row1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/b_books"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Books"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_music"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Music"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_tv"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="TV"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/b_art"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Art"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/row2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/b_video_games"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Video Games"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_board_games"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Board Games"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/row3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/b_computers"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Computers"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_gadgets"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Gadgets"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_mathematics"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Mathematics"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/row4"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/b_mythology"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Mythology"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_history"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="History"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_politics"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Politics"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/b_geography"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1.2"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Geography"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/row5"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/b_nature"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Nature"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_animals"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Animals"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_vehicles"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Vehicles"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/b_sports"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Sports"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/row6"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/b_comics"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Comics"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_anime"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Anime and Manga"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/b_cartoon"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:background="@drawable/background_more_rounded"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Cartoons"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
